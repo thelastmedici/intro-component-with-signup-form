@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    background-color:hsl(0, 100%, 74%) ;
+    background-image: url('./images/bg-intro-desktop.png');
+    font-family: "Poppins", serif;
+    color: white;
+    font-size: 16px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.container {
+    display: flex;
+    max-width: 1440px;
+    width: 75%;
+    /* background-color: black; */
+    margin: 0 auto;
+    max-height: 100vh;
+    height: 800px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.left-card {
+    margin: 0;
+    flex: 1; 
+    padding-right: 169px;
+}
+h1{
+    font-family: "Poppins", serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.5rem;
+}
+.right-card {
+    background: white;
+    padding: 80px;
+    margin-right: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: 580px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 45px;
+
+}
+
+/* Subscription Banner */
+.subscription {
+    background: hsl(248, 32%, 49%); /* Purple color */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    border-radius: 8px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.sign-up form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.sign-up input {
+    width: 100%;
+    padding: 18px;
+    margin-bottom: 10px;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Button */
+.claim-btn {
+    background: hsl(154, 59%, 51%); /* Green background */
+    color: white;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+.claim-btn:hover {
+    background: hsl(154, 59%, 45%); /* Slightly darker green */
+}
+
+/* Terms Text */
+.terms {
+    font-size: 12px;
+    color: hsl(246, 25%, 55%);
+    text-align: center;
+    margin-top: 10px;
+}
+
+.terms span {
+    color: hsl(0, 100%, 74%); /* Red color for 'Terms and Services' */
+    font-weight: bold;
+    cursor: pointer;
+}
