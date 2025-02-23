@@ -132,3 +132,40 @@ h1{
     font-weight: bold;
     cursor: pointer;
 }
+
+@media (max-width:375px) {
+
+    body {
+        background-image: url('./images/bg-intro-mobile.png');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+    }
+    .container{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .left-card{
+        padding-right: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    h1{
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+    .subscription{
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .right-card {
+        margin-right: 0;
+        padding: 20px;
+        width: 100%;
+    }
+   
+}
