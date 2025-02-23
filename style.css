@@ -73,6 +73,14 @@ h1{
     margin-bottom: 20px;
     box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.2);
 }
+.subscription p{
+    font-size: 16px;
+    font-weight: 100;
+}
+.subscription span {
+    font-weight: bold;
+    cursor: pointer;
+}
 
 .sign-up form {
     display: flex;
