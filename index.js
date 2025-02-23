@@ -1,20 +1,23 @@
-var output = [];
-var count = 1;
-function fizzBuzz(){
-    output.push(count++);
- if(count % 3 && count % 5 === 0){
-    console.log("FizzBuzz");   
- }
- else if(count % 3 === 0){
-     console.log("Fizz");
- }
- else if(count % 5 === 0){
-     console.log("FizzBuzz");
- }
- else{
-     console.log(output);
- }
-}
-fizzBuzz(30);
+const claimButton = document.querySelector('button')
 
-basit
+claimButton.addEventListener('submit', function (e) {
+    e.preventDefault();
+})
+
+function validateFname() {
+    const fnameInput = document.querySelector('#fname');
+    const fnameError = document.querySelector('#fnameError');
+
+    if (fnameInput.value.trim() === "") { // trim() prevents spaces from being counted as input
+        fnameError.textContent = "First Name cannot be empty";
+        fnameError.style.display = 'block'; // Ensure it's visible
+        fnameError.style.color = 'red'; // Make error message red
+        fnameInput.style.border = '2px solid red';
+        return false;
+    } else {
+        fnameError.textContent = "";
+        fnameError.style.display = 'none'; // Hide when valid
+        fnameInput.style.border = '2px solid #ccc'; // Reset border
+        return true;
+    }
+}

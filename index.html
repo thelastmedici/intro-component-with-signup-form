@@ -33,13 +33,17 @@
       <!-- Sign-up Card -->
       <div class="right-card">
         <div class="sign-up">
-          <form>
-            <input type="text" placeholder="First Name">
-            <input type="text" placeholder="Last Name">
-            <input type="email" placeholder="Email Address">
-            <input type="password" placeholder="Password"> 
+          <form class=signUpForm>
+            <input type="text" placeholder="First Name" id="fname">
+            <p id="fnameError"></p>
+            <input type="text" placeholder="Last Name" id="lname">
+            <p id="lnameError"></p>
+            <input type="email" placeholder="Email Address" id = "email">
+            <p id="emailError">Looks like this is not an email</p>
+            <input type="password" placeholder="Password" id = "password">
+            <p>Password cannot be empty</p>
           </form>
-          <button class="claim-btn">Claim your free trial</button>
+          <button class="claim-btn" type="submit">Claim your free trial</button>
           <p class="terms">
             By clicking the button, you are agreeing to our <span>Terms and Services</span>
           </p>
