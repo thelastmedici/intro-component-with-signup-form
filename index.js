@@ -42,5 +42,16 @@ function validateLname() {
     }
 }
 function validateEmail(){
-   
+   const emailInput = document.getElementById('#email');
+   const emailError = document.getElementById('#emailError');
+   const email = emailInput.value;
+   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+   if (!emailRegex.test(email)){
+     errorMessage.textContent = 'looks like this is not an email';
+   }else{
+     errorMessage.textContent = '';
+     errorMessage.style.display = 'none';
+   }
+
 }
