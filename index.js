@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector('.signUpForm');
   const firstName = document.getElementById('fname');
   const lastName = document.getElementById('lname');
   const email = document.getElementById('email');
@@ -43,14 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
       passwordError.textContent = "Password cannot be empty";
       password.classList.add('input-error');
       isValid = false;
-    } else if(password.value.length < 6){
+    } else if(password.value.length < 8){
       passwordError.textContent = "Password must be at least 6 characters";
       password.classList.add('input-error');
       isValid = false;
     }
     if(isValid){
-      // Form submission logic here
       alert("Form submitted successfully!");
+      form.reset();
     }
   });
 })
