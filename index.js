@@ -1,57 +1,43 @@
-const claimButton = document.querySelector('button')
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector('.signUpForm');
+  const firstName = document.getElementById('fname');
+  const lastName = document.getElementById('lname');
+  const email = document.getElementById('email');
+  const password = document.getElementById('password');
 
-claimButton.addEventListener('submit', function (e) {
+  const fnameError = document.getElementById('fnameError');
+  const lnameError = document.getElementById('lnameError');
+  const emailError = document.getElementById('emailError');
+  const passwordError = document.getElementById('passwordError');
+
+  const submitBtn = document.querySelector('.claim-btn');
+
+  submitBtn.addEventListener("click", function(e){
     e.preventDefault();
-    validateFname();
-    validateLname();
+
+
+    [fnameError, lnameError, emailError, passwordError].forEach(error => error.textContent = "");
+    [firstName, lastName, email, password].forEach(input => input.classList.remove('input-error'));
+
+    let isValid = true;
+
+    if(firstName.value.trim() === ""){
+      fnameError.textContent = "First Name cannot be empty";
+      firstName.classList.add('input-error');
+      isValid = false;
+    }
+
+    if(lastName.value.trim() === ""){
+      lnameError.textContent = "Last Name cannot be empty";
+      lastName.classList.add('input-error');
+      isValid = false;
+    }
+
+    const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if(!email.value.match(emailPattern)){
+      emailError.textContent = "Looks like this is not an email";
+      email.classList.add('input-error');
+      isValid = false;
+    }
+  })
 })
-
-function validateFname() {
-    const fnameInput = document.querySelector('#fname');
-    const fnameError = document.querySelector('#fnameError');
-
-    if (fnameInput.value.trim() === "") { // trim() prevents spaces from being counted as input
-        fnameError.textContent = "First Name cannot be empty";
-        fnameError.style.display = 'block'; // Ensure it's visible
-        fnameError.style.color = 'red'; // Make error message red
-        fnameInput.style.border = '2px solid red';
-        return false;
-    } else {
-        fnameError.textContent = "";
-        fnameError.style.display = 'none'; // Hide when valid
-        fnameInput.style.border = '2px solid #ccc'; // Reset border
-        return true;
-    }
-}
-
-function validateLname() {
-    const lnameInput = document.querySelector('#lname');
-    const lnameError = document.querySelector('#lnameError');
-
-    if (lnameInput.value.trim() === "") {
-        lnameError.textContent = "Last Name cannot be empty";
-        lnameError.style.display = 'block';
-        lnameError.style.color ='red';
-        lnameInput.style.border = '2px solid red';
-        return false;
-    } else {
-        lnameError.textContent = "";
-        lnameError.style.display = 'none';
-        lnameInput.style.border = '2px solid #ccc';
-        return true;
-    }
-}
-function validateEmail(){
-   const emailInput = document.getElementById('#email');
-   const emailError = document.getElementById('#emailError');
-   const email = emailInput.value;
-   const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-   if (!emailRegex.test(email)){
-     errorMessage.textContent = 'looks like this is not an email';
-   }else{
-     errorMessage.textContent = '';
-     errorMessage.style.display = 'none';
-   }
-
-}

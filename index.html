@@ -33,17 +33,24 @@
       <!-- Sign-up Card -->
       <div class="right-card">
         <div class="sign-up">
+
           <form class=signUpForm>
             <input type="text" placeholder="First Name" id="fname">
-            <p id="fnameError"></p>
+            <span id="fnameError" class="error-message"></span>
+
             <input type="text" placeholder="Last Name" id="lname">
-            <p id="lnameError"></p>
+            <span id="lnameError" class="error-message"></span>
+
             <input type="email" placeholder="Email Address" id = "email">
-            <p id="emailError"></p>
+            <span id="emailError" class="error-message"></span>
+
             <input type="password" placeholder="Password" id = "password">
-            <p id="passwordError"></p>
+            <span id="passwordError" class="error-message"></span>
+            
+            <button class="claim-btn" type="submit">Claim your free trial</button>
           </form>
-          <button class="claim-btn" type="submit">Claim your free trial</button>
+
+          
           <p class="terms">
             By clicking the button, you are agreeing to our <span>Terms and Services</span>
           </p>
